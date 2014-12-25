@@ -1,6 +1,6 @@
 class @Ball
-  WIDTH = 10
-  HEIGHT = 10
+  Ball.WIDTH = 10
+  Ball.HEIGHT = 10
 
   constructor: (x, y) ->
     this.x = x

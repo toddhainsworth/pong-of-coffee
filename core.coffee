@@ -13,14 +13,18 @@ update = ->
       if player_paddle.y <= (canvas.height - Paddle.HEIGHT)
         player_paddle.y += 3
 
-    if ball.x < 0 || ball.x > canvas.width
+    if ball.x < 0 || ball.x > (canvas.width - Ball.WIDTH)
       ball.vel_x *= -1
 
-    if ball.y < 0 || ball.y > canvas.height
+    if ball.y < 0 || ball.y > (canvas.height - Ball.HEIGHT)
       ball.vel_y *= -1
 
     ball.x += ball.vel_x
     ball.y += ball.vel_y
+
+    cpu_paddle.y = ball.y
+    if cpu_paddle.y > (canvas.height - Paddle.HEIGHT)
+      cpu_paddle.y = (canvas.height - Paddle.HEIGHT)
 
 draw = ->
   context.clearRect(0, 0, canvas.width, canvas.height)
