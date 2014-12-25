@@ -1,8 +1,13 @@
 class @Paddle
-  constructor: (name, colour) ->
+  Paddle.WIDTH = 10
+  Paddle.HEIGHT = 50
+
+  constructor: (name, colour, x, y) ->
     this.name = name
     this.colour = colour
+    this.x = x
+    this.y = y
 
   draw: (context) ->
     context.fillStyle = this.colour
-    context.fillRect(20, 20, 20, 20)
+    context.fillRect(this.x, this.y, Paddle.WIDTH, Paddle.HEIGHT)
