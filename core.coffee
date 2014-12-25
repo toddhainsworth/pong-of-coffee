@@ -6,24 +6,24 @@ ball = new Ball(canvas.width / 2, canvas.height / 2)
 keys = []
 
 update = ->
-    if keys[38] # up
-      if player_paddle.y >= 0
-        player_paddle.y -= 3
-    else if keys[40] # down
-      if player_paddle.y <= (canvas.height - Paddle.HEIGHT)
-        player_paddle.y += 3
+  if keys[38] # up
+    if player_paddle.y >= 0
+      player_paddle.y -= 3
+  else if keys[40] # down
+    if player_paddle.y <= (canvas.height - Paddle.HEIGHT)
+      player_paddle.y += 3
 
-    if ball.x < 0 || ball.x > (canvas.width - Ball.WIDTH)
-      ball.vel_x *= -1
+  if ball.x < 0 || ball.x > (canvas.width - Ball.WIDTH)
+    ball.vel_x *= -1
 
-    if ball.y < 0 || ball.y > (canvas.height - Ball.HEIGHT)
-      ball.vel_y *= -1
+  if ball.y < 0 || ball.y > (canvas.height - Ball.HEIGHT)
+    ball.vel_y *= -1
 
-    ball.x += ball.vel_x
-    ball.y += ball.vel_y
+  ball.x += ball.vel_x
+  ball.y += ball.vel_y
 
-    if (cpu_paddle.y = ball.y) > (canvas.height - Paddle.HEIGHT)
-      cpu_paddle.y = (canvas.height - Paddle.HEIGHT)
+  if (cpu_paddle.y = ball.y) > (canvas.height - Paddle.HEIGHT)
+    cpu_paddle.y = (canvas.height - Paddle.HEIGHT)
 
 draw = ->
   context.clearRect(0, 0, canvas.width, canvas.height)
