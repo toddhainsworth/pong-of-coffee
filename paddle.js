@@ -10,6 +10,8 @@
       this.colour = colour;
       this.x = x;
       this.y = y;
+      this.width = 10;
+      this.height = 50;
     }
 
     Paddle.prototype.draw = function(context) {

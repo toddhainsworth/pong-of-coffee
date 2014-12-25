@@ -8,6 +8,9 @@ class @Paddle
     this.x = x
     this.y = y
 
+    this.width = 10
+    this.height = 50
+
   draw: (context) ->
     context.fillStyle = this.colour
     context.fillRect(this.x, this.y, Paddle.WIDTH, Paddle.HEIGHT)
