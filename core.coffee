@@ -22,8 +22,7 @@ update = ->
     ball.x += ball.vel_x
     ball.y += ball.vel_y
 
-    cpu_paddle.y = ball.y
-    if cpu_paddle.y > (canvas.height - Paddle.HEIGHT)
+    if (cpu_paddle.y = ball.y) > (canvas.height - Paddle.HEIGHT)
       cpu_paddle.y = (canvas.height - Paddle.HEIGHT)
 
 draw = ->
