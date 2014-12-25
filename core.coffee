@@ -41,7 +41,6 @@ main_loop = ->
 
 add_event_listeners = ->
   document.body.addEventListener('keydown', (e) -> keys[e.keyCode] = true)
-
   document.body.addEventListener('keyup', (e) -> keys[e.keyCode] = false)
 
 add_event_listeners()
