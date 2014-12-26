@@ -1,5 +1,5 @@
 @Helpers =
-  hits: (object1, object2) ->
+  collision_between: (object1, object2) ->
     !(object1.x + object1.width < object2.x ||
      object2.x + object2.width < object1.x ||
      object1.y + object1.height < object2.y ||
